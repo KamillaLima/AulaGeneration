@@ -12,7 +12,7 @@ public class ExercicioOito {
 		System.out.println("1                   Saldo");
 		System.out.println("2                   Saque");
 		System.out.println("3                   Depósito");
-		System.out.print("Informe o código da operação que deseja realizar");
+		System.out.print("Informe o código da operação que deseja realizar : ");
 		int codigoOperacao = sn.nextInt();
 		switch (codigoOperacao) {
 		case 1: {

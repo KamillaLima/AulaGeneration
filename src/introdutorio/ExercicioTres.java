@@ -20,7 +20,7 @@ public class ExercicioTres {
 		
 		float total = salarioBruto + adicionalNoturno + (totalHoras * 5) -descontos;
 		System.out.print("O salário líquido é de R$" + total);
-		
+		sc.close();
 		
 	}
 

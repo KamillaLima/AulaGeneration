@@ -9,7 +9,7 @@ public class EntradaSaida {
 		System.out.println("Escreva o seu nome: ");
 		String nome = sn.nextLine();
 		System.out.println("bom dia " + nome);
-		
+		sn.close();
 		
 	}
 

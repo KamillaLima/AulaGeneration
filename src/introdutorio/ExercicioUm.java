@@ -12,6 +12,7 @@ public class ExercicioUm {
 		float abono = sc.nextFloat();
 		float novoSalario = salario+abono;
 		System.out.println("O valor do seu salário como o abono é de R$"+novoSalario);
+		sc.close();
 	}
 
 }
