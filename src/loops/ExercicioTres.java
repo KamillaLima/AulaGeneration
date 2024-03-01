@@ -12,7 +12,10 @@ public class ExercicioTres {
 		while (idade > -1) {
 			System.out.print("Informe a idade: ");
 			idade = sn.nextInt();
-			if (idade <= 21 && idade>= 1) {
+			if (idade <= -1 ) {
+				break;
+			}
+			else if (idade <= 21) {
 				menorVinteUm++;
 			} else if (idade >= 50) {
 				maiorCinquenta++;

@@ -38,7 +38,7 @@ public class ExercicioQuatro {
 
 		}
 		mediaIdades = mediaIdades/total;
-		System.out.println("Total de pessoas desenvolvedoras Backend: " + pessoasBackend);
+		System.out.println("\nTotal de pessoas desenvolvedoras Backend: " + pessoasBackend);
 
 		System.out.println("Total de Mulheres Cis e Trans desenvolvedoras Frontend: " + mulheresCisTransFrontend);
 
