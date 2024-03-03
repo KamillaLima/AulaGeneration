@@ -1,58 +1,60 @@
 package collections;
 
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.Iterator;
 import java.util.Scanner;
+import java.util.Stack;
 
 public class ExercicioPilha {
 
 	public static void main(String[] args) {
+		Stack<String> listaLivros = new Stack<String>();
 		Scanner sn = new Scanner(System.in);
-		Queue<String> listaClientes = new LinkedList<String>();
 		boolean menu = true;
 		while (menu) {
-			System.out.println("\n1-Adicionar um novo Cliente na fila ");
-			System.out.println("2-Listar todos os Clientes na fila ");
-			System.out.println("3-Chamar (retirar) uma pessoa da fila ");
-			System.out.println("0-O programa deve ser finalizado ");
+			System.out.println("\n1-Adicionar um novo livro na pilha ");
+			System.out.println("2-Listar todos os livros ");
+			System.out.println("3-Retirar livro da pilha ");
+			System.out.println("0-SAIR");
 			System.out.print("\nInforme a opção que você deseja : ");
 			int opcao = sn.nextInt();
 			switch (opcao) {
-			case 0 : {
+			case 0: {
 				System.out.println("PROGRAMA FINALIZADO !");
 				menu = false;
 				break;
 			}
 			case 1: {
 
-				System.out.println("\nAdicionar um novo Cliente na fila");
-				System.out.print("Informe o nome do cliente para ser adicionado : ");
-				System.out.println("");
-				String nomeCliente = sn.next().toUpperCase();
-				listaClientes.add(nomeCliente);
-				System.out.println("CLIENTE ADICIONADO COM SUCESSO! ");
+				System.out.println("\nAdicionar um novo livro na fila");
+				System.out.print("Informe o nome do livro para ser adicionado :");
+				sn.nextLine();
+				String nomeLivro = sn.nextLine();
+				listaLivros.add(nomeLivro);
+				System.out.println("LIVRO ADICIONADO COM SUCESSO! ");
 				break;
 			}
 
 			case 2: {
-				System.out.println("\nListar todos os Clientes na fila");
-				if(listaClientes.size() != 0) {
-					System.out.println(listaClientes);
-				}
-				else {
-					System.out.println("Ainda não possuem clientes cadastrados!");
+				System.out.println("\nListar todos os livros na fila");
+				Iterator<String> Ilista = listaLivros.iterator();
+
+				while (Ilista.hasNext()) {
+					// o HasNext significa que ele
+					// irá retornar verdadeiro no caso de possuir mais elementos.
+					// Já o next irá retornar o próximo elemento
+					System.out.println(Ilista.next());
 				}
 				break;
 			}
 
 			case 3: {
-				System.out.println("\nChamar (retirar) uma pessoa da fila");
-				if(listaClientes.size() != 0) {
-					listaClientes.remove();
+				System.out.println("\nRetirar um livro ");
+				if (listaLivros.size() != 0) {
+					listaLivros.pop();
 				}
 
 				else {
-					System.out.println("Ainda não possuem clientes cadastrados!");
+					System.out.println("Ainda não possuem livros cadastrados!");
 				}
 				break;
 			}
